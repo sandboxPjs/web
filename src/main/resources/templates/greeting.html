@@ -6,5 +6,9 @@
 </head>
 <body>
 <p th:text="'Hello, ' + ${name} + '!'" />
+<form action="#" th:action="@{/submitName}" th:object="${user}" method="post">
+    <input type="text" th:field="*{name}" />
+    <input type="submit" value="Submit" />
+</form>
 </body>
 </html>
